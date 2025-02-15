@@ -1,0 +1,1 @@
+alert("probando el script de manera externa");
