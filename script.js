@@ -188,23 +188,126 @@
 // 5x3=15
 // 5x4=20
 
+// let numero = parseInt(prompt("Ingresa un número para ver su tabla de multiplicar (del 1 al 10):"));
+
+// if (!isNaN(numero) && numero > 0) {
+
+//     document.write(`<h2>Tabla del ${numero}</h2>`);
+//     let resultadoTexto = `Tabla del ${numero}:\n`;
+
+//     for (let i = 1; i <= 10; i++) {
+//         let resultado = numero * i;
+//         document.write(`${numero} x ${i} = ${resultado} <br>`);
+//         resultadoTexto += `${numero} x ${i} = ${resultado}\n`;
+//     }
+
+//     alert(resultadoTexto);
+// } else {
+//     alert("Por favor, ingresa un número válido.");
+//     document.write("<p>Debes ingresar un número válido.</p>");
+// }
+
+// 1. Imprime por consola un mensaje si el usuario y contraseña coincide con unos establecidos
+
+// 2. verifica si un número es positivo, negativo o cero e imprime un mensaje
+
+// 3. verificaa si una persona puede votar o no (mayor o igual a 18) e indica cuántos años le faltan
+
+// 4. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad
 
 
-let numero = parseInt(prompt("Ingresa un número para ver su tabla de multiplicar (del 1 al 10):"));
+// let finde=false
+// if {
+//     (finde=false)
+//     console.log("puedes salvar al mundo")
+// }
 
-if (!isNaN(numero) && numero > 0) {
 
-    document.write(`<h2>Tabla del ${numero}</h2>`);
-    let resultadoTexto = `Tabla del ${numero}:\n`;
+// else{
+//     console.log("sigue descansando")
+// }
 
-    for (let i = 1; i <= 10; i++) {
-        let resultado = numero * i;
-        document.write(`${numero} x ${i} = ${resultado} <br>`);
-        resultadoTexto += `${numero} x ${i} = ${resultado}\n`;
-    }
+//realizar un programa que determine en que dia de la semana corresponde hoy o utilizando la funcion prompt
+/*
+const dia = new Date().getDate()
 
-    alert(resultadoTexto);
-} else {
-    alert("Por favor, ingresa un número válido.");
-    document.write("<p>Debes ingresar un número válido.</p>");
+switch (dia) {
+    
+    case 1:
+    console.log("¡Hoy es lunes! 😢")
+    break
+
+    case 2:
+        console.log("Hoy es martes")
+        break
+
+    case 3:
+        console.log("hoy es miercoles")
+        break
+    
+    case 4:
+        console.log("hoy es jueves")
+        break
+
+    case 5:
+        console.log("hoy es viernessss")
+        break
+
+    case 6:
+        console.log("hoy es sabado")
+        break
+
+    case 0:
+        console.log("hoy es domingo")
+        break
+
+default:
+    console.log("No es lunes, YAY! 🚀")
+    break
 }
+
+*/
+
+//1. Programa que dada la edad de una persona indique si es mayor o menor de edad. se considera mayor de edad a partir de los 18 años.
+
+const edad = parseInt(prompt("Ingresa tu edad:")); 
+
+if (edad >= 18) {
+    console.log("Eres mayor de edad.");
+} else {
+    console.log("Eres menor de edad.");
+}
+
+//3. Dado dos números A y B, determinar si A es mayor, menor o igual que B
+
+const A = parseFloat(prompt("Ingresa el primer número (A):"));
+const B = parseFloat(prompt("Ingresa el segundo número (B):"));
+
+if (A > B) {
+    console.log("A es mayor que B.");
+} else if (A < B) {
+    console.log("A es menor que B.");
+} else {
+    console.log("A y B son iguales.");
+}
+
+//5. Dado el peso de una persona:
+/*
+a) Si el peso es menor o igual a 40kg. Muestre el mensaje. Persona peso promedio;
+
+b)Si el peso es entre 41 y 70 Kg. Muestre el mensaje. Persona peso promedio;
+
+c)Si el peso es mayor a 71 Kg. Muestre el mensaje Persona sobrepeso
+
+*/
+
+const peso = parseFloat(prompt("Ingresa tu peso en kg:"));
+
+if (peso <= 40) {
+    console.log("Persona Baja de Peso.");
+} else if (peso >= 41 && peso <= 70) {
+    console.log("Persona peso promedio.");
+} else {
+    console.log("Persona con sobrepeso.");
+}
+
