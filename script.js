@@ -268,46 +268,115 @@ default:
 
 */
 
-//1. Programa que dada la edad de una persona indique si es mayor o menor de edad. se considera mayor de edad a partir de los 18 años.
+// // 1. Programa que dada la edad de una persona indique si es mayor o menor de edad.
+// // Se considera mayor de edad a partir de los 18 años.
+// const edad = parseInt(prompt("Ingresa tu edad:")); 
+// if (edad >= 18) {
+//     alert("Eres mayor de edad.");
+// } else {
+//     alert("Eres menor de edad.");
+// }
 
-const edad = parseInt(prompt("Ingresa tu edad:")); 
+// // 3. Dado dos números A y B, determinar si A es mayor, menor o igual que B.
+// const A = parseFloat(prompt("Ingresa el primer número (A):"));
+// const B = parseFloat(prompt("Ingresa el segundo número (B):"));
+// if (A > B) {
+//     alert("A es mayor que B.");
+// } else if (A < B) {
+//     alert("A es menor que B.");
+// } else {
+//     alert("A y B son iguales.");
+// }
+
+// // 5. Dado el peso de una persona:
+// //    a) Si el peso es menor o igual a 40 Kg. Mostrar: "Persona Baja de Peso".
+// //    b) Si el peso es entre 41 y 70 Kg. Mostrar: "Persona peso promedio".
+// //    c) Si el peso es mayor a 71 Kg. Mostrar: "Persona con sobrepeso".
+// const peso = parseFloat(prompt("Ingresa tu peso en kg:"));
+// if (peso <= 40) {
+//     alert("Persona Baja de Peso.");
+// } else if (peso >= 41 && peso <= 70) {
+//     alert("Persona peso promedio.");
+// } else {
+//     alert("Persona con sobrepeso.");
+// }
+
+// // 7. En un almacén se hace un 20% de descuento a los clientes cuya compra supere los $1000,
+// //    a los demás se les hace un 5% de descuento. ¿Cuál será la cantidad que pagará una persona?
+// const compra = parseFloat(prompt("Ingresa el valor de la compra:"));
+// let totalPagar;
+// if (compra > 1000) {
+//     totalPagar = compra - (compra * 0.20); // Descuento del 20%
+// } else {
+//     totalPagar = compra - (compra * 0.05); // Descuento del 5%
+// }
+// alert(`El total a pagar es: $${totalPagar.toFixed(2)}`);
+
+// // 9. Programa que lea los nombres y edades de dos personas e imprima cuál de ellas tiene más edad.
+// const nombre1 = prompt("Ingresa el nombre de la primera persona:");
+// const edad1 = parseInt(prompt(`Ingresa la edad de ${nombre1}:`));
+// const nombre2 = prompt("Ingresa el nombre de la segunda persona:");
+// const edad2 = parseInt(prompt(`Ingresa la edad de ${nombre2}:`));
+// if (edad1 > edad2) {
+//     alert(`${nombre1} es mayor que ${nombre2}.`);
+// } else if (edad1 < edad2) {
+//     alert(`${nombre2} es mayor que ${nombre1}.`);
+// } else {
+//     alert(`${nombre1} y ${nombre2} tienen la misma edad.`);
+// }
+
+// // 13. Escribe un programa que determine si un número ingresado por el usuario es par o impar.
+// const numero = parseInt(prompt("Ingresa un número:"));
+// if (numero % 2 === 0) {
+//     alert("El número es par.");
+// } else {
+//     alert("El número es impar.");
+// }
+
+// // 15. Crea un programa que solicite un número y verifique si es positivo, negativo o igual a cero.
+// const num = parseFloat(prompt("Ingresa un número:"));
+// if (num > 0) {
+//     alert("El número es positivo.");
+// } else if (num < 0) {
+//     alert("El número es negativo.");
+// } else {
+//     alert("El número es cero.");
+// }
+
+// // 17. Escribe un programa que permita al usuario seleccionar una figura geométrica 
+// //     (triángulo o cuadrado) y luego calcule el área de esa figura ingresando los datos necesarios.
+// const figura = prompt("Elige una figura (triángulo o cuadrado):").toLowerCase();
+// if (figura === "triángulo") {
+//     const base = parseFloat(prompt("Ingresa la base del triángulo:"));
+//     const altura = parseFloat(prompt("Ingresa la altura del triángulo:"));
+//     const area = (base * altura) / 2;
+//     alert(`El área del triángulo es: ${area}`);
+// } else if (figura === "cuadrado") {
+//     const lado = parseFloat(prompt("Ingresa el lado del cuadrado:"));
+//     const area = lado * lado;
+//     alert(`El área del cuadrado es: ${area}`);
+// } else {
+//     alert("Figura no válida.");
+// }
+
+// // 19. Diseña un programa que solicite el nombre de un usuario y su contraseña.
+// //     Si el nombre es "admin" y la contraseña es "12345", muestra un mensaje de acceso concedido;
+// //     de lo contrario, muestra un mensaje de acceso denegado.
+// const usuario = prompt("Ingresa tu nombre de usuario:");
+// const contraseña = prompt("Ingresa tu contraseña:");
+// if (usuario === "admin" && contraseña === "12345") {
+//     alert("Acceso concedido.");
+// } else {
+//     alert("Acceso denegado.");
+// }
+
+
+const edad= parseInt(prompt("Ingresa tu edad:"));
 
 if (edad >= 18) {
-    console.log("Eres mayor de edad.");
-} else {
-    console.log("Eres menor de edad.");
+    alert("puedes votar.")
 }
-
-//3. Dado dos números A y B, determinar si A es mayor, menor o igual que B
-
-const A = parseFloat(prompt("Ingresa el primer número (A):"));
-const B = parseFloat(prompt("Ingresa el segundo número (B):"));
-
-if (A > B) {
-    console.log("A es mayor que B.");
-} else if (A < B) {
-    console.log("A es menor que B.");
-} else {
-    console.log("A y B son iguales.");
+else {
+    const anosFaltantes = 18 - edad;
+    alert(`Aún no puedes votar, te faltan ${anosFaltantes} años para poder votar.`);
 }
-
-//5. Dado el peso de una persona:
-/*
-a) Si el peso es menor o igual a 40kg. Muestre el mensaje. Persona peso promedio;
-
-b)Si el peso es entre 41 y 70 Kg. Muestre el mensaje. Persona peso promedio;
-
-c)Si el peso es mayor a 71 Kg. Muestre el mensaje Persona sobrepeso
-
-*/
-
-const peso = parseFloat(prompt("Ingresa tu peso en kg:"));
-
-if (peso <= 40) {
-    console.log("Persona Baja de Peso.");
-} else if (peso >= 41 && peso <= 70) {
-    console.log("Persona peso promedio.");
-} else {
-    console.log("Persona con sobrepeso.");
-}
-
