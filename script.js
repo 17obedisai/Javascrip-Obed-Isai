@@ -371,12 +371,136 @@ default:
 // }
 
 
-const edad= parseInt(prompt("Ingresa tu edad:"));
+// const edad= parseInt(prompt("Ingresa tu edad:"));
 
-if (edad >= 18) {
-    alert("puedes votar.")
+// if (edad >= 18) {
+//     alert("puedes votar.")
+// }
+// else {
+//     const anosFaltantes = 18 - edad;
+//     alert(`Aún no puedes votar, te faltan ${anosFaltantes} años para poder votar.`);
+// }
+/*
+//FUNCIONES
+function saludar (){
+    alert("Hola probando las funciones")
 }
-else {
-    const anosFaltantes = 18 - edad;
-    alert(`Aún no puedes votar, te faltan ${anosFaltantes} años para poder votar.`);
+saludar
+*/
+
+// function sumar (){
+//     return 2+2
+// }
+// const resultado = sumar()
+// alert(sumar())
+
+// function getRandomNumer() {
+//     const random = Math.random()
+
+//     const multiplied = random * 10
+
+//     const rounded = Math.floor(multiplied)
+
+//     const result = rounded + 1
+
+//     return result
+// }
+
+// console.log("Probando node.js");
+
+// // Funciones con function express
+// const suma = function(a, b) {
+//     console.log("Resultado de la suma:", a + b);
+//     return a + b;
+// };
+
+// const resta = function(a, b) {
+//     console.log("Resultado de la resta:", a - b);
+//     return a - b;
+// };
+
+// const multiplicacion = function(a, b) {
+//     console.log("Resultado de la multiplicación:", a * b);
+//     return a * b;
+// };
+
+// const division = function(a, b) {
+//     if (b === 0) {
+//         console.log("Error: División por cero");
+//         return 'Error: División por cero';
+//     }
+//     console.log("Resultado de la división:", a / b);
+//     return a / b;
+// };
+
+// // Funciones de flecha
+// const sumaFlecha = (a, b) => {
+//     console.log("Resultado de la suma (flecha):", a + b);
+//     return a + b;
+// };
+
+// const restaFlecha = (a, b) => {
+//     console.log("Resultado de la resta (flecha):", a - b);
+//     return a - b;
+// };
+
+// const multiplicacionFlecha = (a, b) => {
+//     console.log("Resultado de la multiplicación (flecha):", a * b);
+//     return a * b;
+// };
+
+// const divisionFlecha = (a, b) => {
+//     if (b === 0) {
+//         console.log("Error: División por cero");
+//         return 'Error: División por cero';
+//     }
+//     console.log("Resultado de la división (flecha):", a / b);
+//     return a / b;
+// };
+
+// // Ejecución de las funciones
+// suma(10, 5);
+// resta(10, 5);
+// multiplicacion(10, 5);
+// division(10, 5);
+
+// sumaFlecha(10, 5);
+// restaFlecha(10, 5);
+// multiplicacionFlecha(10, 5);
+// divisionFlecha(10, 5);
+
+
+
+// function cuentaAtras(numero) {
+//     // Condición base: Si el número que recibe es
+//     // menor de 0 entonces salimos de la función
+//     if (numero < 0) { return }
+
+//     // Si el número era mayor o igual a 0, lo mostramos
+//     console.log(numero)
+
+//     // Y llamamos a la función con el número anterior
+//     cuentaAtras(numero - 1)
+// }
+
+// cuentaAtras(5)
+
+function suma(n) {
+    if (n === 0 || n === 1) {
+        console.log(`suma(${n}) = ${n} (caso base)`);
+        return n;
+    } else {
+      const resultadoParcial = suma(n - 1); // Llamada recursiva
+        const resultadoFinal = n + resultadoParcial;
+        console.log(`suma(${n}) = ${n} + suma(${n - 1}) = ${resultadoFinal}`);
+        return resultadoFinal;
+    }
 }
+console.log("Resultado final:", suma(3));
+
+function suma(n) {
+    if (n === 1) return 1; // Caso base: Si es 1, devuelve 1
+    return n + suma(n - 1); // Si no, suma n + el resultado de la función con n-1
+}
+
+    console.log(suma(3)); 
